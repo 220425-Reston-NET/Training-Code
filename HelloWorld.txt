@@ -1,1 +1,2 @@
 Hello World. This is me editing using a CLI
+This is a new feature added to this file
