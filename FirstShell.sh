@@ -25,7 +25,7 @@ echo "Greater!"
 echo "$ten > $five"
 fi
 
-echo testingall
+echo testall
 
 echo "This is outside of the then fi"
 
