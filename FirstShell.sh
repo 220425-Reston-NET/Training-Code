@@ -25,6 +25,8 @@ echo "Greater!"
 echo "$ten > $five"
 fi
 
+echo testingall
+
 echo "This is outside of the then fi"
 
 echo "===Second If==="
