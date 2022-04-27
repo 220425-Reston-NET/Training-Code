@@ -5,7 +5,6 @@ Console.WriteLine("Hello, World!"); //Writeline will write something in the term
 //[Class name] [NameOfObject] = new [Class name]();
 Car carObj1 = new Car();
 
-
 //Referencing class members within an object
 int mile = carObj1.TotalDistancePerFuel();
 
@@ -25,21 +24,24 @@ Console.WriteLine(carObj2.Owner);
 carObj2.Fuel = -100;
 Console.WriteLine(carObj2.Fuel);
 
+//Menu Demo
+Menu menuObj = new Menu();
 bool repeat = true;
+
+Console.WriteLine("Hello! What is your name?");
+menuObj.Name = Console.ReadLine();
+
 while (repeat)
 {
-    Console.WriteLine("What do you want to do?");
+    menuObj.GreetUser();
     string answer = Console.ReadLine();
-    if (answer == "")
+    if (answer == "1")
     {
-
+        menuObj.BuyItem();
     }
-    else if (answer == "Exit")
+    else if (answer == "2")
     {
+        Console.WriteLine("Your total price is " + menuObj.TotalPrice);
         repeat = false;
-    }
-    else
-    {
-        
     }
 }
