@@ -6,6 +6,6 @@
 ## Re-create your old shell menu using C# language
 1. Create a different C# file named Menu.cs in HelloWorld
 2. Create a Menu class and put in all the class members (such as field, property, methods, etc.) you think you'll need to re-create your shell menu
-	* Program.cs is the starting point of your program so to reference any code you write in Menu class
+	* Note: Program.cs is the starting point of your program
 3. Push all the changes to your remote github repo.
 Note: Look into Console.ReadLine() as it is similar to read command in shell
