@@ -5,8 +5,11 @@ public class Car
     //This is a field
     //It is used to store information or define the current state of the object
     //By default, fields should all be private
+    //private means that only the class itself has access to it
     private string _color;
+    //string is used for words/sentences
     private string _owner;
+    //int is used for whole numbers
     private int _fuel;
     private int _gallonPerMile;
 
