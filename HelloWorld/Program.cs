@@ -24,3 +24,22 @@ Console.WriteLine(carObj2.Owner);
 //Checking if our property constraints is working
 carObj2.Fuel = -100;
 Console.WriteLine(carObj2.Fuel);
+
+bool repeat = true;
+while (repeat)
+{
+    Console.WriteLine("What do you want to do?");
+    string answer = Console.ReadLine();
+    if (answer == "")
+    {
+
+    }
+    else if (answer == "Exit")
+    {
+        repeat = false;
+    }
+    else
+    {
+        
+    }
+}
