@@ -26,22 +26,25 @@ Console.WriteLine(carObj2.Fuel);
 
 //Menu Demo
 Menu menuObj = new Menu();
-bool repeat = true;
+// bool repeat = true;
 
-Console.WriteLine("Hello! What is your name?");
-menuObj.Name = Console.ReadLine();
+// Console.WriteLine("Hello! What is your name?");
+// menuObj.Name = Console.ReadLine();
 
-while (repeat)
-{
-    menuObj.GreetUser();
-    string answer = Console.ReadLine();
-    if (answer == "1")
-    {
-        menuObj.BuyItem();
-    }
-    else if (answer == "2")
-    {
-        Console.WriteLine("Your total price is " + menuObj.TotalPrice);
-        repeat = false;
-    }
-}
+// while (repeat)
+// {
+//     menuObj.GreetUser();
+//     string answer = Console.ReadLine();
+//     if (answer == "1")
+//     {
+//         menuObj.BuyItem();
+//     }
+//     else if (answer == "2")
+//     {
+//         Console.WriteLine("Your total price is " + menuObj.TotalPrice);
+//         repeat = false;
+//     }
+// }
+
+Collections collectObj = new Collections();
+collectObj.CollectionMain();
