@@ -50,3 +50,5 @@ Collections collectObj = new Collections();
 collectObj.CollectionMain();
 
 Conversions.ConversionMain();
+
+Data.DataMain();
