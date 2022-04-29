@@ -41,6 +41,7 @@
 ## GIT
 * It is a Version Control System (VCS)
     * Allows you to manage the changes/developments made in a project
+    * Specifically, we will follow `Distributed Version Control System`
 * As you know, the more you develop your application the more changes you add to it and it becomes impossible to track it manually. GIT does it for us.
 * It will create a local repository for us.
 
@@ -56,6 +57,17 @@
 * Github is essential to the process because it lets us work on the same project with multiple people. 
 * Just imagine 5 people trying to access the same computer just to work on the same project. That would be a nightmare!
 * Instead, we use Github to create a remote repository that we can share with everyone else and they can work on their **own** copy of the project in their **own** computer (in a more technical term is they will create a local repository that is similar to the remote repository). Once they finish, they can **push** (Just means upload) their version of local repository to the remote repository to update the remote repository to look like the local repository.
+
+## Distributed Version Control System (DVCS)
+* When everyone has a local repository in their computer and doesn't need a constant connection to the remote repo to make their own changes/features
+* They can push their code to the remote repo whenever they finish making their changes
+* Everyone else can just pull the code from the remote repo to get those changes
+## Centralized Version Control System (CVCS)
+* No one has a local copy of the project in their computer
+* All project files are located in the remote repository
+    * hence the meaning of `centralized` everything is in one place
+* Changes can only be made if you have a constant connection to the internet
+* A more secure way to keep your app confidential
 
 ### Pros
 * Allows you to keep track of all the changes to each file to help you debug potential issues
