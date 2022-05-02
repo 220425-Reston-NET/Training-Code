@@ -26,5 +26,16 @@
         public string Name { get; set; }
         public string Type { get; set; }
 
+        public List<Ability> Abilities { get; set; }
+
+        //Every time you make a new model, make sure you create a constructor
+        //This constructor will be responsible to instantiating other objects as well as setting default values for your othe properties
+        public Pokemon()
+        {
+            PokeID = 1;
+            Name = "Ditto";
+            Type = "Neutral";
+            Abilities = new List<Ability>();
+        }
     }
 }
