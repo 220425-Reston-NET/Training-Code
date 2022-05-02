@@ -1,4 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using Day4;
+using Day5;
+
 Console.Clear(); //Will clear the console
 Console.WriteLine("Hello, World!"); //Writeline will write something in the terminal
 
