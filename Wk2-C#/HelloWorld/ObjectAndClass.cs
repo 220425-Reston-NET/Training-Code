@@ -58,10 +58,10 @@ public class Car
     public string Owner 
     {
         //get keyword is this is how the data is going to be shared
-        get {return _owner + " is the owner of this car.";}
+        get {return _owner;}
 
         //set keyword is how you change the data that is being stored
-        set {_owner=value+" Owner";}
+        set {_owner=value;}
     }
 
     //Fuel can only hold numbers from 0 to 100

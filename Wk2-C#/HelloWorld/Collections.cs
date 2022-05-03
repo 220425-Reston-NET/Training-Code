@@ -35,7 +35,7 @@ public class Collections
     ArrayList _numbersArrayList = new ArrayList();
 
 
-    public async void CollectionMain()
+    public void CollectionMain()
     {
         Console.WriteLine("===Array Demo===");
         //Allows us to set what tos tore in certain positions
