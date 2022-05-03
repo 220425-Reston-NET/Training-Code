@@ -1,3 +1,6 @@
+using PokeDL;
+using PokeModel;
+
 namespace PokeUI
 {
     public class MainMenu
@@ -19,6 +22,17 @@ namespace PokeUI
             if (userInput == "1")
             {
                 //Logic add pokemon
+                Console.Clear();
+                Pokemon pokeobj = new Pokemon();
+                Console.WriteLine("What is the name of the pokemon?");
+                pokeobj.Name = Console.ReadLine();
+                Console.WriteLine("What is the Type of the pokemon?");
+                pokeobj.Type = Console.ReadLine();
+                Console.WriteLine("What is the PokeID?");
+                //Since PokeId is a integer and Console.ReadLine() gives a string, we have to convert to int
+                pokeobj.PokeID = Convert.ToInt32(Console.ReadLine());
+
+                Repository.AddPokemon(pokeobj);
                 return "AddPokemon";
             }
             else if (userInput == "0")

@@ -1,0 +1,20 @@
+[
+  {
+    "PokeID": 1,
+    "Name": "Ditto",
+    "Type": "Neutral",
+    "Abilities": []
+  },
+  {
+    "PokeID": 1,
+    "Name": "Pikachu",
+    "Type": "Electric",
+    "Abilities": []
+  },
+  {
+    "PokeID": 10,
+    "Name": "Charizard",
+    "Type": "Fire",
+    "Abilities": []
+  }
+]

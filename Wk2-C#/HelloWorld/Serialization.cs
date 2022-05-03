@@ -32,7 +32,7 @@ public class Serialization
             We will use a premade class called File that can be used to read/write files
             WriteAllText method will create a file if no file exists and use the jsonString to store that information in that file
         */
-        // File.WriteAllText(_filepath, jsonString);
+        File.WriteAllText(_filepath, jsonString);
         //Next step is reading that file and storing it in a C# object
 
         try
