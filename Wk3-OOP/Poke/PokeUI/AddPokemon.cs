@@ -13,7 +13,16 @@ public class AddPokemon : IMenu
         Console.WriteLine("What is the pokemon type?");
         pokeObj.Type = Console.ReadLine();
         Console.WriteLine("What is the pokeID?");
-        pokeObj.PokeID = Convert.ToInt32(Console.ReadLine());
+
+        try
+        {
+            pokeObj.PokeID = Convert.ToInt32(Console.ReadLine());
+        }
+        catch (System.Exception)
+        {
+            Console.WriteLine("PokeId Cannot be negative!");
+            pokeObj.PokeID = 1;
+        }
         Console.WriteLine("[1] - Add the pokemon");
         Console.WriteLine("[0] - Exit");
     }

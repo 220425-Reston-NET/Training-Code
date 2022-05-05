@@ -22,7 +22,8 @@ namespace PokeUI
 
             if (userInput == "2")
             {
-                //Code here
+                //We return what we think the menu should display next when that person picked that choice
+                //In this case it will display the AddPokemon menu instead
                 return "AddPokemon";
             }
             else if (userInput == "1")
