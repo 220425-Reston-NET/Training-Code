@@ -10,7 +10,8 @@ namespace PokeUI
         {
             Console.WriteLine("Welcome to the Main Menu!");
             Console.WriteLine("What can I do for you?");
-            Console.WriteLine("[1] - Add a new pokemon");
+            Console.WriteLine("[2] - Add a new pokemon");
+            Console.WriteLine("[1] - Search Pokemon");
             Console.WriteLine("[0] - Exit");
         }
 
@@ -19,25 +20,17 @@ namespace PokeUI
         {
             string userInput = Console.ReadLine();
 
-            if (userInput == "1")
+            if (userInput == "2")
             {
-                //Logic add pokemon
-                Console.Clear();
-                Pokemon pokeobj = new Pokemon();
-                Console.WriteLine("What is the name of the pokemon?");
-                pokeobj.Name = Console.ReadLine();
-                Console.WriteLine("What is the Type of the pokemon?");
-                pokeobj.Type = Console.ReadLine();
-                Console.WriteLine("What is the PokeID?");
-                //Since PokeId is a integer and Console.ReadLine() gives a string, we have to convert to int
-                pokeobj.PokeID = Convert.ToInt32(Console.ReadLine());
-
-                Repository.AddPokemon(pokeobj);
+                //Code here
                 return "AddPokemon";
+            }
+            else if (userInput == "1")
+            {
+                return "SearchPokemon";
             }
             else if (userInput == "0")
             {
-                //Logic to exit
                 return "Exit";
             }
             else

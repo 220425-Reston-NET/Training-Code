@@ -31,7 +31,7 @@ using PokeUI;
 Console.Clear();
 
 //Creating MainMenu obj
-MainMenu menu = new MainMenu();
+IMenu menu = new MainMenu();
 bool repeat = true;
 
 while (repeat)
@@ -42,11 +42,15 @@ while (repeat)
 
     if (ans == "MainMenu")
     {
-        
+        menu = new MainMenu();
     }
     else if (ans == "AddPokemon")
     {
-        
+        menu = new AddPokemon();
+    }
+    else if (ans == "SearchPokemon")
+    {
+        menu = new SearchPokemon();
     }
     else if (ans == "Exit")
     {
