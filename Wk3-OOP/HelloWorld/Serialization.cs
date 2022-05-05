@@ -56,6 +56,18 @@ public class Serialization
             string jsonString4 = File.ReadAllText(_filepath);
             Console.WriteLine(jsonString4);
         }
+        //You can have more catch blocks perfectly fine
+        //Generally the lower catch blocks will be more for generic exceptions
+        catch (System.Exception)
+        {
+            throw new System.Exception("You can specify message");
+        }
+        //This will always run regardless if an except was caught or not
+        finally
+        {
+            //Used for code clean up
+        }
+
 
 
 

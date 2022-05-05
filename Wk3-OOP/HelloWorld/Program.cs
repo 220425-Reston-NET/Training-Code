@@ -27,6 +27,16 @@ Console.WriteLine(carObj2.Owner);
 carObj2.Fuel = -100;
 Console.WriteLine(carObj2.Fuel);
 
+Car.Registration = true;
+
+carObj1.GetRegistration();
+carObj2.GetRegistration();
+
+Car.Registration = false;
+
+carObj1.GetRegistration();
+carObj2.GetRegistration();
+
 //Menu Demo
 Menu menuObj = new Menu();
 // bool repeat = true;

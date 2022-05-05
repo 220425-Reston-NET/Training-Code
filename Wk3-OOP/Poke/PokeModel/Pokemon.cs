@@ -1,4 +1,6 @@
-﻿namespace PokeModel
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace PokeModel
 {
     public class Pokemon
     {
@@ -18,7 +20,7 @@
                 else
                 {
                     //We will replace this line later on once we learn exceptions
-                    Console.WriteLine("Pokemon ID can only hold positive numbers! ( value > 0 )");
+                    throw new ValidationException("PokeID needs to be above 0.");
                 }
             }
         }

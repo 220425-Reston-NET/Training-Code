@@ -12,6 +12,12 @@ public class Car
     //int is used for whole numbers
     private int _fuel;
     private int _gallonPerMile;
+    public static bool Registration {  get; set;}
+
+    public void GetRegistration()
+    {
+        Console.WriteLine(Registration);
+    }
 
     //This is a method
     //A way to represent behavior/function and it will run multiple lines of code
