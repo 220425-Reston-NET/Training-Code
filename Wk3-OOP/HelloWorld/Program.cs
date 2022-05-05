@@ -58,3 +58,20 @@ Conversions.ConversionMain();
 
 Serialization serialobj = new Serialization();
 serialobj.SerializationMain();
+
+Console.WriteLine("===OOP Demo===");
+Dog dogobj = new Dog();
+dogobj.Name = "Minnie";
+dogobj.Talk();
+dogobj.Run();
+dogobj.Talk("Barking!");
+dogobj.Breed = "Chihuahua";
+
+Animal aniobj = new Animal();
+aniobj.Name = "McCoy";
+aniobj.Run();
+// aniobj.Breed This doesn't work because inheritance only works one way. Only the dog gets everything from the animal and the animal doesn't inherit from the dog
+aniobj.Health();
+
+IAnimal aniobj2 = new Animal();
+aniobj2.Health();

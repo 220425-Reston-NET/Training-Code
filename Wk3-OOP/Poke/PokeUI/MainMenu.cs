@@ -3,7 +3,7 @@ using PokeModel;
 
 namespace PokeUI
 {
-    public class MainMenu
+    public class MainMenu : IMenu
     {
         //This method will display things in your terminal that will show what the user can do
         public void Display()

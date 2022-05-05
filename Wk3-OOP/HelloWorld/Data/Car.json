@@ -1,1 +1,5 @@
-{"Owner":"Stephen","Fuel":100,"Brand":null}
+{
+  "Owner": "Maaz",
+  "Fuel": 100,
+  "Brand": "Toyota"
+}
