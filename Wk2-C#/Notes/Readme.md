@@ -15,6 +15,16 @@
     * Object-oriented means everythign is based on objects and classes and the relationships between them
     * Type-safe meaning once you set a datatype you can't change the datatype (unless you use certain techniques to do it)
 
+## Compiler vs Runtime
+### Compiler
+* Compiler is the one that will take your source code (your bunch of c# files) and convert it into something the computer understands
+* It will also check if you misspelled some things in your source code, check if you reference the right thing, or ultimately, doesn't understand what you just wrote
+* The compiler is that red lines that you see in the code since the compiler tried converting it but failed when it came across those portion of your code
+### Runtime
+* This is after the compiler is finished converting your code into something the computer understands
+* It is the part of the process in which the computer starts running your application
+* So essentially, runtime exception happens when your code can be compiled (converted to machine code) and ran into a problem while running your code
+
 # What is Object-Oriented programming?
 * It is a methodology we use to design our programs just using classes and objects
 * It makes it a lot easier to develop and maintain your project as it gets bigger
@@ -160,3 +170,11 @@
 * Certain exceptions are more specific than other exceptions
 * General rule is the most specific exception should be the very first catch block and the least specific exception is at the very last catch block
     * Why? Well if you made the least specific the first catch block then it will always run if any exception is thrown making your other catch blocks useless
+
+# What are static methods?
+* static non-access modifier changes the class member to make it belong to the class itself
+* So far to access any class member we always make a object out of it since by default, the class members belong to an object
+* Adding static keyword after the public (or some access modifier) will make make it so we can use that class member without creating an object out of it
+* Ex: Console class is a static class we have been using to write things on the terminal
+    * If you check on all demos, we never made a Console object at all to start using its methods
+
