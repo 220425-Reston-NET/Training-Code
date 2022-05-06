@@ -3,7 +3,7 @@ using PokeModel;
 
 public class AddPokemon : IMenu
 {
-    private Pokemon pokeObj = new Pokemon();
+    private Pokemon pokeobj = new Pokemon();
 
     public void Display()
     {
