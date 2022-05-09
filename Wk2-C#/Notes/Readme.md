@@ -59,9 +59,6 @@
 * Why the heap? since memory in the heap can be dynamically changing
 * Ex: classes, arrays, interfaces, strings, etc.
 
-# What happens when you run your code?
-* Well the computer doesn't understand english language and the keywords we have written in our source code (source codes are just )
-
 # Arrays
 * Used to store a datatype and have fixed sizes
 * Zero-based index
