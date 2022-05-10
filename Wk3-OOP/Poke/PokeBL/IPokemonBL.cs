@@ -22,7 +22,7 @@ namespace PokeBL
         /// </summary>
         /// <param name="p_pokeName">Name of the pokemon used to search</param>
         /// <returns>Multiple pokemons if they have matching name</returns>
-        List<Pokemon> SearchPokemonByName(string p_pokeName);
+        Pokemon SearchPokemonByName(string p_pokeName);
         
         // List<Pokemon> SearchPokemonById(int p_pokeId);
     }

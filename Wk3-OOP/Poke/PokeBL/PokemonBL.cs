@@ -12,12 +12,33 @@ namespace PokeBL
             Random rand = new Random();
             p_poke.Health = rand.Next(50);
 
-            Repository.AddPokemon(p_poke);
+            //Checks if that pokemon name already exists
+            Pokemon foundedpokemon = SearchPokemonByName(p_poke.Name);
+            if (foundedpokemon == null)
+            {
+                Repository.AddPokemon(p_poke);
+            }
+            else
+            {
+                throw new Exception("Pokemon name already exist");
+            }
         }
 
-        public List<Pokemon> SearchPokemonByName(string p_pokeName)
+        public Pokemon SearchPokemonByName(string p_pokeName)
         {
-            throw new NotImplementedException();
+            List<Pokemon> currentListOfPoke = Repository.GetAllPokemon();
+
+            foreach (Pokemon pokeObj in currentListOfPoke)
+            {
+                //Condition to check that the name is similar
+                if (pokeObj.Name == p_pokeName)
+                {
+                    return pokeObj;
+                }
+            }
+
+            //Will return null or no value if no pokemon was found
+            return null;
         }
     }
 }

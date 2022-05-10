@@ -55,7 +55,7 @@ while (repeat)
     }
     else if (ans == "SearchPokemon")
     {
-        menu = new SearchPokemon();
+        menu = new SearchPokemon(new PokemonBL());
     }
     else if (ans == "Exit")
     {

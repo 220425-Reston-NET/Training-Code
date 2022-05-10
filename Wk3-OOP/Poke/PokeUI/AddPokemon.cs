@@ -49,7 +49,17 @@ public class AddPokemon : IMenu
         if (userInput == "1")
         {
             // Repository.AddPokemon(pokeObj);
-            _pokeBL.AddPokemon(pokeObj);
+            try
+            {
+                _pokeBL.AddPokemon(pokeObj);
+                
+            }
+            catch (System.Exception)
+            {
+                Console.WriteLine("Pokemon name already exist!");
+                Console.ReadLine();
+            }
+
             return "MainMenu";
         }
         else if (userInput == "0")
