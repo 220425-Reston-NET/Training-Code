@@ -16,6 +16,8 @@ namespace PokeDL
 
             string jsonString = JsonSerializer.Serialize(listOfPoke, new JsonSerializerOptions{WriteIndented = true});
             File.WriteAllText(_filepath, jsonString);
+
+            // return p_poke;
         }
 
         public static List<Pokemon> GetAllPokemon()

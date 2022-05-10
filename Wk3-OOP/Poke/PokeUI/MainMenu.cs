@@ -1,4 +1,3 @@
-using PokeDL;
 using PokeModel;
 
 namespace PokeUI

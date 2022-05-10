@@ -3,18 +3,42 @@
     "PokeID": 1,
     "Name": "Ditto",
     "Type": "Neutral",
+    "Health": 0,
     "Abilities": []
   },
   {
     "PokeID": 1,
     "Name": "Pikachu",
     "Type": "Electric",
+    "Health": 0,
     "Abilities": []
   },
   {
     "PokeID": 10,
     "Name": "Charizard",
     "Type": "Fire",
+    "Health": 0,
+    "Abilities": []
+  },
+  {
+    "PokeID": 10,
+    "Name": "Pikachu",
+    "Type": "Electric",
+    "Health": 0,
+    "Abilities": []
+  },
+  {
+    "PokeID": 10,
+    "Name": "Ditto",
+    "Type": "Neutral",
+    "Health": 0,
+    "Abilities": []
+  },
+  {
+    "PokeID": 129,
+    "Name": "Charizard",
+    "Type": "Fire",
+    "Health": 45,
     "Abilities": []
   }
 ]

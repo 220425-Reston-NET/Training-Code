@@ -1,9 +1,24 @@
-using PokeDL;
+using PokeBL;
 using PokeModel;
 
 public class AddPokemon : IMenu
 {
-    private Pokemon pokeobj = new Pokemon();
+    private Pokemon pokeObj = new Pokemon();
+
+    //====== Dependency Injection Pattern =======
+    //Add the field of the interface you are trying to add
+    private IPokemonBL _pokeBL;
+
+    //Create a constructor with a parameter of that interface
+    public AddPokemon(IPokemonBL p_pokeBL)
+    {
+        //Set the field with the parameter
+        _pokeBL = p_pokeBL;
+    }
+
+    //NOTE: Look into your program.cs and fix the red line
+    //===========================================
+
 
     public void Display()
     {
@@ -33,7 +48,8 @@ public class AddPokemon : IMenu
 
         if (userInput == "1")
         {
-            Repository.AddPokemon(pokeObj);
+            // Repository.AddPokemon(pokeObj);
+            _pokeBL.AddPokemon(pokeObj);
             return "MainMenu";
         }
         else if (userInput == "0")

@@ -1,9 +1,9 @@
 ﻿// See https://aka.ms/new-console-template for more information
-
-
-using PokeModel;
+using PokeBL;
 using PokeUI;
 
+//=====================================
+// Useful for debugging model validation
 // Console.WriteLine("Hello, World!");
 
 // //Creating an object
@@ -27,11 +27,15 @@ using PokeUI;
 // {
 //     Console.WriteLine(item.Name);
 // }
+//=======================================
 
 Console.Clear();
 
 //Creating MainMenu obj
+// Another form of polymorphism called Variance
+// Variance - that is letting a reference variable have multiple forms/objects hold by having it define as an interface 
 IMenu menu = new MainMenu();
+
 bool repeat = true;
 
 while (repeat)
@@ -46,7 +50,8 @@ while (repeat)
     }
     else if (ans == "AddPokemon")
     {
-        menu = new AddPokemon();
+        // Need to add pokemonBL object inside of the parameter
+        menu = new AddPokemon(new PokemonBL());
     }
     else if (ans == "SearchPokemon")
     {

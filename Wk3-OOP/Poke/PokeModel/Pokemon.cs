@@ -27,6 +27,7 @@ namespace PokeModel
         
         public string Name { get; set; }
         public string Type { get; set; }
+        public int Health { get; set; }
 
         public List<Ability> Abilities { get; set; }
 

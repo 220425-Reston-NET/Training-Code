@@ -40,9 +40,7 @@ public class Collections
         Console.WriteLine("===Array Demo===");
         //Allows us to set what tos tore in certain positions
         //0 1 2 3 4 - Zero-based index
-        _numbersArray[0] = 3;
-        _numbersArray[1] = 10;
-        _numbersArray[2] = 100;
+       
 
         //A way to go through an array
         //Foreach will iterate through all the of the elemnts of the array
