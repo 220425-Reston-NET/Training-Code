@@ -12,6 +12,12 @@ namespace PokeBL
             _pokeRepo = p_pokeRepo;
         }
 
+        public void AddAbilityToPokemon(Pokemon p_pokemon)
+        {
+            //Logic to update pokemon
+            _pokeRepo.Update(p_pokemon);
+        }
+
         //============================================================
 
         public void AddPokemon(Pokemon p_poke)

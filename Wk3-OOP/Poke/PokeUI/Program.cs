@@ -29,6 +29,10 @@ while (repeat)
     {
         menu = new SearchPokemon(new PokemonBL(new PokemonRepository()));
     }
+    else if (ans == "SelectAbility")
+    {
+        menu = new SelectAbility(new AbilityBL(new AbilityRepository()), new PokemonBL(new PokemonRepository()));
+    }
     else if (ans == "Exit")
     {
         repeat = false;

@@ -23,5 +23,11 @@ namespace PokeDL
         /// </summary>
         /// <returns>T is the resource being given</returns>
         List<T> GetAll();
+
+        /// <summary>
+        /// This will update an existing resource
+        /// </summary>
+        /// <param name="p_resource">This is the resource it is updating</param>
+        void Update(T p_resource);
     }
 }

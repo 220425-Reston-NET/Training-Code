@@ -4,6 +4,22 @@
     "Name": "Pikachu",
     "Type": "Electric",
     "Health": 45,
-    "Abilities": []
+    "Abilities": [
+      {
+        "Name": "Tackle",
+        "PP": 100,
+        "Power": 40
+      },
+      {
+        "Name": "Thunderbolt",
+        "PP": 10,
+        "Power": 100
+      },
+      {
+        "Name": "Quick Attack",
+        "PP": 40,
+        "Power": 40
+      }
+    ]
   }
 ]

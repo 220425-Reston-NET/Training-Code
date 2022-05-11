@@ -3,6 +3,7 @@ using PokeModel;
 
 public class SearchPokemon : IMenu
 {
+    public static Pokemon foundedPokemon;
 
     //===========Dependency Injection===========
     private IPokemonBL _pokeBL;
@@ -35,7 +36,7 @@ public class SearchPokemon : IMenu
             Console.WriteLine("Enter a pokemon name: ");
             string pokeName = Console.ReadLine();
             
-            Pokemon foundedPokemon = _pokeBL.SearchPokemonByName(pokeName);
+            foundedPokemon = _pokeBL.SearchPokemonByName(pokeName);
 
             //Condition that it should only display the pokemon info if it found a pokemon
             if (foundedPokemon == null)
@@ -49,12 +50,23 @@ public class SearchPokemon : IMenu
                 Console.WriteLine("Type: "+ foundedPokemon.Type);
                 Console.WriteLine("Health: " + foundedPokemon.Health);
                 Console.WriteLine("==============");
-            }
 
-            //Acting like a stopping point so we can display information
+                //Ask user if they want to add an ability to this pokemon
+                Console.WriteLine("Do you want to add an ability to this pokemon? (Y - Yes, N - No)");
+                string addPokeChoice = Console.ReadLine();
+                if (addPokeChoice == "Y")
+                {
+                    return "SelectAbility";
+                }
+                else
+                {
+                    return "SearchPokemon";
+                }
+            } 
+
             Console.ReadLine();
-
             return "SearchPokemon";
+
         }
         else if (userInput == "1")
         {

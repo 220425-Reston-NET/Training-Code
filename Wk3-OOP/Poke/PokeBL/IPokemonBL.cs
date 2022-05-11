@@ -25,5 +25,6 @@ namespace PokeBL
         Pokemon SearchPokemonByName(string p_pokeName);
         
         // List<Pokemon> SearchPokemonById(int p_pokeId);
+        void AddAbilityToPokemon(Pokemon p_pokemon);
     }
 }

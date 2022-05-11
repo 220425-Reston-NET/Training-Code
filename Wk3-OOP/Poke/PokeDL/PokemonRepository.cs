@@ -25,6 +25,27 @@ namespace PokeDL
 
             return listOfPokemon;
         }
+
+        public void Update(Pokemon p_resource)
+        {
+            // Current information from the database
+            List<Pokemon> listOfPokemon = GetAll();
+
+            //Finds the matching pokemon object in the database
+            foreach (Pokemon pokeObj in listOfPokemon)
+            {
+                //Condition to find the same pokemon
+                if (pokeObj.Name == p_resource.Name)
+                {
+                    //Saves this information to the list collection
+                    pokeObj.Abilities = p_resource.Abilities;
+                }
+            }
+
+            //Saves this information to the database
+            string jsonString = JsonSerializer.Serialize(listOfPokemon, new JsonSerializerOptions{WriteIndented = true});
+            File.WriteAllText(_filepath, jsonString);   
+        }
     }
 
 }
