@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using PokeBL;
+using PokeDL;
 using PokeUI;
 
 //Creating MainMenu obj
@@ -22,11 +23,11 @@ while (repeat)
     else if (ans == "AddPokemon")
     {
         // Need to add pokemonBL object inside of the parameter
-        menu = new AddPokemon(new PokemonBL());
+        menu = new AddPokemon(new PokemonBL(new PokemonRepository()));
     }
     else if (ans == "SearchPokemon")
     {
-        menu = new SearchPokemon(new PokemonBL());
+        menu = new SearchPokemon(new PokemonBL(new PokemonRepository()));
     }
     else if (ans == "Exit")
     {

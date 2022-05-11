@@ -5,6 +5,15 @@ namespace PokeBL
 {
     public class PokemonBL : IPokemonBL
     {
+        //================== Dependency Injection ====================
+        private IRepository<Pokemon> _pokeRepo;
+        public PokemonBL(IRepository<Pokemon> p_pokeRepo)
+        {
+            _pokeRepo = p_pokeRepo;
+        }
+
+        //============================================================
+
         public void AddPokemon(Pokemon p_poke)
         {
             //Processing data
@@ -16,7 +25,7 @@ namespace PokeBL
             Pokemon foundedpokemon = SearchPokemonByName(p_poke.Name);
             if (foundedpokemon == null)
             {
-                Repository.AddPokemon(p_poke);
+                _pokeRepo.Add(p_poke);
             }
             else
             {
@@ -26,7 +35,7 @@ namespace PokeBL
 
         public Pokemon SearchPokemonByName(string p_pokeName)
         {
-            List<Pokemon> currentListOfPoke = Repository.GetAllPokemon();
+            List<Pokemon> currentListOfPoke = _pokeRepo.GetAll();
 
             foreach (Pokemon pokeObj in currentListOfPoke)
             {

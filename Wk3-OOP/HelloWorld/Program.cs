@@ -85,3 +85,7 @@ aniobj.Health();
 
 IAnimal aniobj2 = new Animal();
 aniobj2.Health();
+
+ConversionsTwo.ConversionTwoMain();
+
+Generics<string>.Add("10","213");

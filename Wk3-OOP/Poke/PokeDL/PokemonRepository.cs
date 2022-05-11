@@ -4,23 +4,21 @@ using PokeModel;
 namespace PokeDL
 {
     //This class is responsible for storing and reading our data
-    public class Repository
+    public class PokemonRepository : IRepository<Pokemon>
     {
-        private static string _filepath = "../PokeDL/Data/Pokemon.json";
+        private string _filepath = "../PokeDL/Data/Pokemon.json";
 
         //Purpose of this method is to add a pokemon to our data
-        public static void AddPokemon(Pokemon p_poke)
+        public void Add(Pokemon p_poke)
         {
-            List<Pokemon> listOfPoke = GetAllPokemon();
+            List<Pokemon> listOfPoke = GetAll();
             listOfPoke.Add(p_poke);
 
             string jsonString = JsonSerializer.Serialize(listOfPoke, new JsonSerializerOptions{WriteIndented = true});
             File.WriteAllText(_filepath, jsonString);
-
-            // return p_poke;
         }
 
-        public static List<Pokemon> GetAllPokemon()
+        public List<Pokemon> GetAll()
         {
             string jsonString = File.ReadAllText(_filepath);
             List<Pokemon> listOfPokemon = JsonSerializer.Deserialize<List<Pokemon>>(jsonString);

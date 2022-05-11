@@ -1,1 +1,9 @@
-[]
+[
+  {
+    "PokeID": 10,
+    "Name": "Pikachu",
+    "Type": "Electric",
+    "Health": 45,
+    "Abilities": []
+  }
+]
