@@ -21,5 +21,25 @@
         "Power": 40
       }
     ]
+  },
+  {
+    "PokeID": 1,
+    "Name": "Jigglypuff",
+    "Type": "Fairy",
+    "Health": 37,
+    "Abilities": []
+  },
+  {
+    "PokeID": 129837,
+    "Name": "Squirtle",
+    "Type": "Water",
+    "Health": 10,
+    "Abilities": [
+      {
+        "Name": "Tackle",
+        "PP": 100,
+        "Power": 40
+      }
+    ]
   }
 ]

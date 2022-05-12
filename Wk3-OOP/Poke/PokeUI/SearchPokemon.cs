@@ -11,6 +11,7 @@ public class SearchPokemon : IMenu
     {
         _pokeBL = p_pokeBL;
     }
+
     //==========================================
     public void Display()
     {
@@ -45,11 +46,7 @@ public class SearchPokemon : IMenu
             }
             else
             {
-                Console.WriteLine("===Pokemon Info===");
-                Console.WriteLine("Name: " + foundedPokemon.Name);
-                Console.WriteLine("Type: "+ foundedPokemon.Type);
-                Console.WriteLine("Health: " + foundedPokemon.Health);
-                Console.WriteLine("==============");
+                Console.WriteLine(foundedPokemon.ToString());
 
                 //Ask user if they want to add an ability to this pokemon
                 Console.WriteLine("Do you want to add an ability to this pokemon? (Y - Yes, N - No)");

@@ -35,6 +35,7 @@ public class AddPokemon : IMenu
         }
         catch (System.Exception)
         {
+            Log.Warning("User tried to add a negative number!");
             Console.WriteLine("PokeId Cannot be negative!");
             pokeObj.PokeID = 1;
         }
@@ -56,6 +57,8 @@ public class AddPokemon : IMenu
             }
             catch (System.Exception)
             {
+                Log.Warning("Pokemon name already exist!");
+                Log.Information(pokeObj.ToString());
                 Console.WriteLine("Pokemon name already exist!");
                 Console.ReadLine();
             }

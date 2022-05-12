@@ -40,5 +40,13 @@ namespace PokeModel
             Type = "Neutral";
             Abilities = new List<Ability>();
         }
+
+        //Override the tostring method to display object information
+        //If you want to display the object information in a string format in multiple places
+        //You can access this method by just doing (objectName).ToString()
+        public override string ToString()
+        {
+            return $"===Pokemon Info===\nName:  {Name}\nType: {Type}\nHealth:  {Health}\n==============";
+        }
     }
 }
