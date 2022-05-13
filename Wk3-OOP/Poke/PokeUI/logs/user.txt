@@ -30,3 +30,4 @@ Health:  18
 2022-05-12 11:46:34.304 -04:00 [INF] User going to Search Menu
 2022-05-12 11:46:43.074 -04:00 [INF] User is selecting ability to a pokemon
 2022-05-12 11:46:50.120 -04:00 [INF] User going to Main Menu
+2022-05-12 14:16:52.735 -04:00 [INF] User going to Search Menu

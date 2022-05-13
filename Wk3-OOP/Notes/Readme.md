@@ -282,3 +282,18 @@ dotnet add package Serilog.Sinks.File
 * High and low level modules should depend on abstractions but not on each other
 * If a class uses the design and implementaiton of another class, it raises the risk that change one class could break the other class
 * To fix, we must both let them depend on abstractions 
+
+# Design Pattern
+* They are reusable solution that will solve the problems that occurs pretty frequently while coding
+* Essentially, some people saw that problem keeps happening across multiple coders and decided to standardize a solution every time you come across to that problem to make your life easier
+* They are some of the best practice a programmer can do to solve common problems while designing your application
+## Singleton Pattern
+* This pattern revolves around creating one concurrent object of a class (So only one object exists while the application runs)
+* This singleton class provides a way to let other classes have direct access to the single object
+* Just think of a universal object that gives access to everyone
+### Advantage
+* Provides a global point of access from multiple classes
+* It is easy to maintain since there is only one instance of that class
+### Disadvantage 
+* Very difficult to unit testing since it has global access
+* Definitely do not put any security sensitive information in a singleton
