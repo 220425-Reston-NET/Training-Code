@@ -297,3 +297,6 @@ dotnet add package Serilog.Sinks.File
 ### Disadvantage 
 * Very difficult to unit testing since it has global access
 * Definitely do not put any security sensitive information in a singleton
+
+# Generics
+* https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/types/generics
