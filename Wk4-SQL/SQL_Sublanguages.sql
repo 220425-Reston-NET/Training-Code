@@ -139,6 +139,12 @@ insert into Car
 values (1, 'Honda'),
 	(2, 'Toyota')
 
+insert into persons_cars
+values (1, 1),
+	(1,2),
+	(2,1),
+	(3,2)
+
 --------------- Join table ------------------
 
 --Inner join
@@ -157,4 +163,7 @@ left join Heart h on p.personSSN = h.personSSN
 select * from Person p
 full join Heart h on p.personSSN = h.personSSN
 
---------------- Normalization ----------------
+--How to join a Many to many relationship
+select * from Person p 
+inner join persons_cars pc on p.personSSN = pc.personSSN
+inner join Car c on c.carId = pc.carId
