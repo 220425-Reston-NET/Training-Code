@@ -36,6 +36,9 @@ values (5, 'Bulbasaur', 'Grass')
 --Select statement
 select pokeId, pokeName, pokeType, pokeHealth from Pokemon
 
+-- * will show every column from a table
+select * from Pokemon
+
 --Update statement
 update Pokemon set pokeHealth = 120
 where pokeName = 'Pikachu'
@@ -84,6 +87,8 @@ values (1,2), (1,2)
 
 -------------- Multiplicity ----------------
 
+--One to One relationship
+--When Table A has one directly related to one row in Table B
 create table Person(
 	personSSN int primary key,
 	personName varchar(100),
@@ -100,4 +105,56 @@ insert into Person
 values (1, 'Stephen', 1923)
 
 insert into Heart
-values (100, 0, 1)
+values (100, 0, 4)
+
+--One to Many relationship
+create table Finger(
+	fingerLength int,
+	fingerType varchar(20),
+	personSSN int foreign key references Person(personSSN)
+)
+
+insert into Finger
+values (5, 'pointy', 1),
+	(6, 'middle', 1),
+	(4, 'ring',1)
+
+--Many to Many relationship
+create table Car(
+	carId int primary key,
+	make varchar(50)
+)
+
+--Join table--
+create table persons_cars(
+	personSSN int foreign key references Person(personSSN),
+	carId int foreign key references Car(carId)
+)
+
+insert into Person
+values (2, 'Daniel', 2434),
+	(3, 'Maaz', 12389)
+
+insert into Car
+values (1, 'Honda'),
+	(2, 'Toyota')
+
+--------------- Join table ------------------
+
+--Inner join
+--I want to view all the hearts connected to Stephen only
+select * from Person p
+inner join Heart h on p.personSSN = h.personSSN
+
+--Left join
+select * from Person p
+left join Heart h on p.personSSN = h.personSSN
+
+--Right join
+--Opposite of the left join
+
+--Full join
+select * from Person p
+full join Heart h on p.personSSN = h.personSSN
+
+--------------- Normalization ----------------
