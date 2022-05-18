@@ -50,9 +50,9 @@ public class AddPokemon : IMenu
         if (userInput == "1")
         {
             // Repository.AddPokemon(pokeObj);
+                _pokeBL.AddPokemon(pokeObj);
             try
             {
-                _pokeBL.AddPokemon(pokeObj);
                 
             }
             catch (System.Exception)

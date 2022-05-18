@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 global using Serilog;
+using Microsoft.Extensions.Configuration;
 using PokeBL;
 using PokeDL;
 using PokeUI;
@@ -8,6 +9,12 @@ using PokeUI;
 Log.Logger = new LoggerConfiguration() //LoggerConfiguration used to configure your logger and create it
     .WriteTo.File("./logs/user.txt") //Configuring the logger to save information to a file called user.txt inside of logs folder
     .CreateLogger(); //A method to create the logger
+
+//Initializing my configuration object
+var configuration = new ConfigurationBuilder() //Builder class used to create my configuration object
+        .SetBasePath(Directory.GetCurrentDirectory()) //Sets the base path to the current directory
+        .AddJsonFile("appsettings.json") //Grabs the specific json file on where the information is from
+        .Build(); //Creates the object
 
 //Creating MainMenu obj
 // Another form of polymorphism called Variance
@@ -31,17 +38,17 @@ while (repeat)
     {
         // Need to add pokemonBL object inside of the parameter
         Log.Information("User going to AddPokemon Menu");
-        menu = new AddPokemon(new PokemonBL(new PokemonRepository()));
+        menu = new AddPokemon(new PokemonBL(new SQLPokemonRepository(configuration.GetConnectionString("Stephen_Pagdilao_DbDemo"))));
     }
     else if (ans == "SearchPokemon")
     {
         Log.Information("User going to Search Menu");
-        menu = new SearchPokemon(new PokemonBL(new PokemonRepository()));
+        menu = new SearchPokemon(new PokemonBL(new SQLPokemonRepository(configuration.GetConnectionString("Stephen_Pagdilao_DbDemo"))));
     }
     else if (ans == "SelectAbility")
     {
         Log.Information("User is selecting ability to a pokemon");
-        menu = new SelectAbility(new AbilityBL(new AbilityRepository()), new PokemonBL(new PokemonRepository()));
+        menu = new SelectAbility(new AbilityBL(new AbilityRepository()), new PokemonBL(new SQLPokemonRepository(configuration.GetConnectionString("Stephen_Pagdilao_DbDemo"))));
     }
     else if (ans == "Exit")
     {

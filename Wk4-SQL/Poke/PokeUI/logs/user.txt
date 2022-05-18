@@ -31,3 +31,26 @@ Health:  18
 2022-05-12 11:46:43.074 -04:00 [INF] User is selecting ability to a pokemon
 2022-05-12 11:46:50.120 -04:00 [INF] User going to Main Menu
 2022-05-12 14:16:52.735 -04:00 [INF] User going to Search Menu
+2022-05-18 11:33:20.249 -04:00 [INF] User going to Search Menu
+2022-05-18 11:33:39.821 -04:00 [INF] User going to Search Menu
+2022-05-18 11:34:08.981 -04:00 [INF] User going to Search Menu
+2022-05-18 11:34:10.353 -04:00 [INF] User going to Main Menu
+2022-05-18 11:34:11.917 -04:00 [INF] User going to AddPokemon Menu
+2022-05-18 11:34:26.935 -04:00 [WRN] Pokemon name already exist!
+2022-05-18 11:34:26.935 -04:00 [INF] ===Pokemon Info===
+Name:  Bulbasaur
+Type: Grass
+Health:  44
+==============
+2022-05-18 11:34:28.100 -04:00 [INF] User going to Main Menu
+2022-05-18 11:35:00.047 -04:00 [INF] User going to Main Menu
+2022-05-18 11:35:03.237 -04:00 [INF] User going to AddPokemon Menu
+2022-05-18 11:47:54.028 -04:00 [INF] User going to AddPokemon Menu
+2022-05-18 11:51:53.846 -04:00 [INF] User going to AddPokemon Menu
+2022-05-18 11:52:20.369 -04:00 [INF] User going to Main Menu
+2022-05-18 12:28:23.586 -04:00 [INF] User going to Search Menu
+2022-05-18 12:28:50.047 -04:00 [INF] User going to Search Menu
+2022-05-18 12:28:52.857 -04:00 [INF] User going to Search Menu
+2022-05-18 12:30:12.287 -04:00 [INF] User going to Search Menu
+2022-05-18 12:30:18.261 -04:00 [INF] User going to Search Menu
+2022-05-18 12:30:19.958 -04:00 [INF] User going to Main Menu
