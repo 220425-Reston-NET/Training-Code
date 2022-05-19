@@ -50,6 +50,11 @@ while (repeat)
         Log.Information("User is selecting ability to a pokemon");
         menu = new SelectAbility(new AbilityBL(new AbilityRepository()), new PokemonBL(new SQLPokemonRepository(configuration.GetConnectionString("Stephen_Pagdilao_DbDemo"))));
     }
+    else if (ans == "ViewAbilityOfPokemon")
+    {
+        Log.Information("User is viewing ability of a pokemon");
+        menu = new ViewAbilityOfPokemon();
+    }
     else if (ans == "Exit")
     {
         repeat = false;

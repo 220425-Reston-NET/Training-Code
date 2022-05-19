@@ -54,3 +54,31 @@ Health:  44
 2022-05-18 12:30:12.287 -04:00 [INF] User going to Search Menu
 2022-05-18 12:30:18.261 -04:00 [INF] User going to Search Menu
 2022-05-18 12:30:19.958 -04:00 [INF] User going to Main Menu
+2022-05-19 12:20:19.977 -04:00 [INF] User going to Search Menu
+2022-05-19 12:21:43.035 -04:00 [INF] User going to Search Menu
+2022-05-19 12:21:48.033 -04:00 [INF] User going to Search Menu
+2022-05-19 12:22:37.899 -04:00 [INF] User going to Search Menu
+2022-05-19 12:22:45.256 -04:00 [INF] User going to Search Menu
+2022-05-19 12:22:54.146 -04:00 [INF] User going to Search Menu
+2022-05-19 12:24:18.963 -04:00 [INF] User going to Search Menu
+2022-05-19 12:24:26.074 -04:00 [INF] User going to Search Menu
+2022-05-19 12:24:33.977 -04:00 [INF] User is viewing ability of a pokemon
+2022-05-19 12:28:12.050 -04:00 [INF] User going to Search Menu
+2022-05-19 12:28:19.329 -04:00 [INF] User is viewing ability of a pokemon
+2022-05-19 12:29:37.577 -04:00 [INF] User going to Search Menu
+2022-05-19 12:29:44.511 -04:00 [INF] User is viewing ability of a pokemon
+2022-05-19 12:45:49.290 -04:00 [INF] User going to Main Menu
+2022-05-19 12:45:58.341 -04:00 [INF] User going to Search Menu
+2022-05-19 12:46:04.997 -04:00 [INF] User is viewing ability of a pokemon
+2022-05-19 12:48:45.821 -04:00 [INF] User going to Main Menu
+2022-05-19 12:48:49.455 -04:00 [INF] User going to Search Menu
+2022-05-19 12:48:54.037 -04:00 [INF] User is viewing ability of a pokemon
+2022-05-19 12:49:13.547 -04:00 [INF] User going to Main Menu
+2022-05-19 12:49:17.408 -04:00 [INF] User going to Search Menu
+2022-05-19 12:49:24.611 -04:00 [INF] User is viewing ability of a pokemon
+2022-05-19 12:49:36.114 -04:00 [INF] User going to Search Menu
+2022-05-19 12:49:40.224 -04:00 [INF] User is viewing ability of a pokemon
+2022-05-19 12:49:44.399 -04:00 [INF] User going to Search Menu
+2022-05-19 12:49:53.916 -04:00 [INF] User is viewing ability of a pokemon
+2022-05-19 12:50:12.762 -04:00 [INF] User going to Search Menu
+2022-05-19 12:50:14.890 -04:00 [INF] User going to Main Menu

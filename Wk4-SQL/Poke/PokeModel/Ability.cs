@@ -23,5 +23,10 @@ namespace PokeModel
         }
         
         public int Power { get; set; }
+
+        public override string ToString()
+        {
+            return $"=======\nName: {Name}\nPP: {PP}\nPower: {Power}\n=======";
+        }
     }
 }

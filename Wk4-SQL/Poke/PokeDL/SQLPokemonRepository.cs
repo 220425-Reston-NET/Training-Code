@@ -72,13 +72,46 @@ namespace PokeDL
                         PokeID = reader.GetInt32(0),
                         Name = reader.GetString(1),
                         Type = reader.GetString(2),
-                        Health = reader.GetInt32(3)
+                        Health = reader.GetInt32(3),
+                        Abilities = GiveAbilityToPokemon(reader.GetInt32(0))
                     });
                 }
 
                 return listOfPokemon;
             }
 
+        }
+
+        private List<Ability> GiveAbilityToPokemon(int p_pokeId)
+        {
+            string SQLquery = @"select p.pokeName, a.abName, pa.PP, a.abPower from Pokemon p
+                        inner join pokemons_abilities pa on p.pokeId = pa.pokeId
+                        inner join Ability a on a.abId = pa.abId
+                        where p.pokeId = @pokeId";
+
+            List<Ability> listOfAbility = new List<Ability>();
+
+            using (SqlConnection con = new SqlConnection(_connectionString))
+            {
+                con.Open();
+
+                SqlCommand command = new SqlCommand(SQLquery, con);
+
+                command.Parameters.AddWithValue("@pokeId", p_pokeId);
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    listOfAbility.Add(new Ability(){
+                        Name = reader.GetString(1),
+                        Power = reader.GetInt32(3),
+                        PP = reader.GetInt32(2)
+                    });
+                }
+            }
+
+            return listOfAbility;
         }
 
         public void Update(Pokemon p_resource)

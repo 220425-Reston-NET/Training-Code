@@ -49,11 +49,17 @@ public class SearchPokemon : IMenu
                 Console.WriteLine(foundedPokemon.ToString());
 
                 //Ask user if they want to add an ability to this pokemon
-                Console.WriteLine("Do you want to add an ability to this pokemon? (Y - Yes, N - No)");
+                Console.WriteLine("[2] - View ability of a pokemon");
+                Console.WriteLine("[1] - Add Ability to Pokemon");
+                Console.WriteLine("[0] - Go back ");
                 string addPokeChoice = Console.ReadLine();
-                if (addPokeChoice == "Y")
+                if (addPokeChoice == "1")
                 {
                     return "SelectAbility";
+                }
+                else if (addPokeChoice == "2")
+                {
+                    return "ViewAbilityOfPokemon";
                 }
                 else
                 {
