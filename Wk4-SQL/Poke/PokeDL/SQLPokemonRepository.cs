@@ -84,7 +84,7 @@ namespace PokeDL
 
         private List<Ability> GiveAbilityToPokemon(int p_pokeId)
         {
-            string SQLquery = @"select p.pokeName, a.abName, pa.PP, a.abPower from Pokemon p
+            string SQLquery = @"select p.pokeName, a.abName, pa.PP, a.abPower, a.abId from Pokemon p
                         inner join pokemons_abilities pa on p.pokeId = pa.pokeId
                         inner join Ability a on a.abId = pa.abId
                         where p.pokeId = @pokeId";
@@ -104,6 +104,7 @@ namespace PokeDL
                 while (reader.Read())
                 {
                     listOfAbility.Add(new Ability(){
+                        ID = reader.GetInt32(4),
                         Name = reader.GetString(1),
                         Power = reader.GetInt32(3),
                         PP = reader.GetInt32(2)

@@ -53,7 +53,7 @@ while (repeat)
     else if (ans == "ViewAbilityOfPokemon")
     {
         Log.Information("User is viewing ability of a pokemon");
-        menu = new ViewAbilityOfPokemon();
+        menu = new ViewAbilityOfPokemon(new PokeAbiJoinBL(new SQLPokeAbilityJoinRepo(configuration.GetConnectionString("Stephen_Pagdilao_DbDemo"))));
     }
     else if (ans == "Exit")
     {

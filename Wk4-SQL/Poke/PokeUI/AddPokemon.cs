@@ -39,6 +39,7 @@ public class AddPokemon : IMenu
             Console.WriteLine("PokeId Cannot be negative!");
             pokeObj.PokeID = 1;
         }
+
         Console.WriteLine("[1] - Add the pokemon");
         Console.WriteLine("[0] - Exit");
     }
@@ -50,10 +51,9 @@ public class AddPokemon : IMenu
         if (userInput == "1")
         {
             // Repository.AddPokemon(pokeObj);
-                _pokeBL.AddPokemon(pokeObj);
             try
             {
-                
+                _pokeBL.AddPokemon(pokeObj);
             }
             catch (System.Exception)
             {

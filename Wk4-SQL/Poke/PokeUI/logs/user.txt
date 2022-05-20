@@ -82,3 +82,27 @@ Health:  44
 2022-05-19 12:49:53.916 -04:00 [INF] User is viewing ability of a pokemon
 2022-05-19 12:50:12.762 -04:00 [INF] User going to Search Menu
 2022-05-19 12:50:14.890 -04:00 [INF] User going to Main Menu
+2022-05-20 11:35:51.733 -04:00 [INF] User going to Search Menu
+2022-05-20 11:35:57.706 -04:00 [INF] User is viewing ability of a pokemon
+2022-05-20 11:44:47.711 -04:00 [INF] User going to Search Menu
+2022-05-20 11:44:49.117 -04:00 [INF] User going to Search Menu
+2022-05-20 11:45:05.030 -04:00 [INF] User going to Search Menu
+2022-05-20 11:45:09.835 -04:00 [INF] User is viewing ability of a pokemon
+2022-05-20 11:45:21.690 -04:00 [INF] User going to Search Menu
+2022-05-20 11:45:22.816 -04:00 [INF] User going to Search Menu
+2022-05-20 12:06:35.114 -04:00 [INF] User going to Search Menu
+2022-05-20 12:06:40.882 -04:00 [INF] User is viewing ability of a pokemon
+2022-05-20 12:22:36.310 -04:00 [INF] User going to Search Menu
+2022-05-20 12:22:41.276 -04:00 [INF] User is viewing ability of a pokemon
+2022-05-20 12:28:54.663 -04:00 [INF] User going to Search Menu
+2022-05-20 12:28:59.259 -04:00 [INF] User is viewing ability of a pokemon
+2022-05-20 12:38:22.911 -04:00 [INF] User going to Search Menu
+2022-05-20 12:38:28.480 -04:00 [INF] User is viewing ability of a pokemon
+2022-05-20 12:39:51.878 -04:00 [INF] User going to Search Menu
+2022-05-20 12:39:53.180 -04:00 [INF] User going to Search Menu
+2022-05-20 12:39:59.048 -04:00 [INF] User going to Search Menu
+2022-05-20 12:40:03.594 -04:00 [INF] User is viewing ability of a pokemon
+2022-05-20 12:40:35.793 -04:00 [INF] User going to Search Menu
+2022-05-20 12:40:51.335 -04:00 [INF] User is viewing ability of a pokemon
+2022-05-20 12:45:35.532 -04:00 [INF] User going to Search Menu
+2022-05-20 12:45:37.835 -04:00 [INF] User going to Main Menu

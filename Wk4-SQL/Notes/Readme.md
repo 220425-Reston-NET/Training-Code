@@ -112,6 +112,96 @@ CREATE TABLE Person (
 ## Full join
 * Returns all rows from both tables but still matches rows that match
 
+# Subquery
+* When one sql statement is not enough
+* It allows you to add a query statement upon a query statement and so on and on...
+* Can be put next to a from and where clause
+    * from clause if you want to select from a filtered table
+    * where clause if you want to select some data and use it as a way to filter your data
+* Subqueries are inside of '()' syntax
+
+# Common Table Expression (CTE)
+* Creating a temporary table in SQL to do some operations on
+* Almost the same as a subquery but it generates a temporary table
+* Seems very useless to us (because it is at the moment) but more complex databases that have 30-50 tables can make temporary tables extremely useful to save work and rewriting the same join statement 50 times
+
+# Set Operations
+* Special type of join
+* It doesn't need to specify what the two tables needs to match on
+* It will combine two queries together
+    * They need to have the same # of columns and same datatype
+
+## Union
+* It will show every value from both queries only once
+* Any duplicated values will only display once
+
+## Union All
+* It will display every value from both queries including duplicated values
+
+## Except
+* It will show only unique values from the right query
+* It will not show any duplicated values
+
+## Intersect
+* It will show only duplicated values once from both queries
+
+# Procedures
+* Almost the same as the methods in C# but has certain unique characteristics
+* Like a method, it can accept input parameters but it can also output multiple parameters
+* Essentially, it can return **multiple datatypes**
+* You can also have optional parameters
+* Like a method, it is reusable
+
+# Triggers
+* They are a special type of procedure that will run when a certain event happens such as insert, update, or delete
+* You can specify when you want the trigger to happen such as:
+    * After/For - execute trigger after the event
+    * Instead of - executes the trigger's operation instead of the event
+
+# ACID
+* A set of properties of database transaction that is intended to guarantee validity even in the event of catostrophic error or system failures
+* Basically, you ensure that your database won't be corrupted if something bad happens
+
+## Transaction
+* Think of a method in C# meaning it can run multiple query statements in a single transaction
+* They will help prevent data inconsistency because they will either execute all sql statement inside the transaction or not
+* Essentially, they will rollback (put everything back the way it was) all the change they did if something bad happens
+
+## Atomicity
+* Either all query statements should execute or none of them will
+* Meaning all sql statements inside some function/stored procedure/trigger (or just use transaction) should execute all its sql statement or none of them
+
+## Consistency
+* There should be a transparent consistency in your database
+* Data should be consistent before and after a transaction
+* Ex: transferring funds from checking to savings should equal to the total value of funds in both accounts
+    * $100 (checking) - $10 (transfer) = $90 (checking) and $10 (savings)
+    * $90 (checking) + $10(savings) = $100
+
+## Isolation
+* The state of a transaction should be invisible to other transaction
+* Can't access the result of other transaction until the transaction completes
+### Degrees of isolation
+* Read uncommitted - does not protect the transaction from any bad phenomenon
+* Read committed (default) - Prevents data from being read by a transaction that is updating it until it finishes committing
+    * Prevents Dirty read
+* Repeatable read - forces the second transaction to wait for the first transaction to update the data
+    * Prevents dirty read and non-repeatable read
+* Serializable - Forces the second transaction to wait for insert, delete, update, etc. to be finished from the first transaction
+    * Highest degree of isolation and prevents all phenomenons
+    * Essentially stops all concurrent transactions from happening
+### Different bad phenomenon that occurs during concurrent transaction
+* Dirty read - reading data that has not been committed
+    * If transaction 1 updated a row followed by transaction 2 reading that updated row and all sudden something went wrong with transaction 1 it will roll back the changes and now transaction 2 had read data that basically never existed
+* Non-repeatable read - when data was read twice but comes out different on each time
+    * If transaction 1 read a row (it has a value of 5) and transaction 2 updates that row (to be 10) and transaction 1 reads that same row (it has a value of 10) and it came out different than the first read. 
+* Phantom read - when data was added or removed by another transaction
+    * If transaction 1 finds the average of a column and transaction 2 comes in and add a new number to that column and transaction 1 finds the average of the column again and it'll changed because of that new row that was added 
+
+## Durability
+* Once a transation is completed, the changes that it made is permanent in the database
+* If there is a system failure, all data is safegaurded (meaning it is still there after the failure)
+
 # ADO.NET
 * Another library (that already exists in our .NET 6 framework) that specializes in connecting to different types of databases/data sources to do CRUD operations on
     * CRUD - create/read/update/delete data on the database
@@ -132,18 +222,16 @@ CREATE TABLE Person (
 * A class that is used to read what is exactly given to you when you execute a SQL statement
 * Since C# only understands classes and objects while SQL only understands tables, this class is the middle man that will provide the conversion tools required to convert SQL datatypes to C# datatypes
 * You still have to map things manually but at least you can grab the data and convert it into datatypes that C# understands
-### DataSet
-* Class made to support the disconnected architecture of ADO.NET
-* Instead of SqlDataReader reading from the database to get information, DataSet will actually store information from the database into the memory of your computer
-* It will also store any special constraints in each column and the relationships between tables
-* Since it stores that information in your computer, you don't need a constant connection to the database
-* You can relate it to DVCS and CVCS
-    * Distributed Version Control System stores the application so you can have your own local repository
-    * Centralized Version Control System needs a constant connection to the remote repository to change it
 
 ## SqlDataAdapter
-* A class that we don't need to use (mostly because the other classes I stated above already uses this class to do their operations) but it is the actual class that stores information in a DataSet after grabbing information from a database
+* A class that we don't need to use but it is the actual class that stores information in a DataSet after grabbing information from a database
+* Not only that, it can also perform some query statements to also update the database (It is like a 2 in 1 a combination between SqlDataReader and SqlCommand)
+* Difference is it stores the info in a Dataset and follows the disconnect architecture type
 * Essentially it is the translator that converts SQL table into C# object (which is the DataSet)
+    * With added benefit of also performing some database operations as well
+### DataSet
+* This is the actual model that SqlDataAdapter uses to store a "table" in C#
+* You can think of it as a representation of a in-memory table in SQL but in C#
 
 # Architecture of ADO.NET
 * Ha! I scared you there for a second, no we don't need to know another architecture and how they structured and make ADO.net work
@@ -151,9 +239,42 @@ CREATE TABLE Person (
 ## Connected Architecture
 * Your application has a constant connection to a database
     * At its core that is really all this means
-* As a programmer, that means utilizing SqlConnection class so we are doing connected architecture
-    * Remember .Open() method? Yeah that means we have an active connection
+* As a programmer, that means utilizing SqlConnection, SqlCommand, and (optional) SqlDataReader class so we are doing connected architecture
+    * Remember .Open() method? Yeah that initiates a constant connection to the database
 ## Disconnected Architecture
 * Your application only establishes a connection if it needs something with the database
 * As a programmer, you need to utilize SqlDataAdapter class instead 
+    * It still needs SqlConnection class to dictate what database you are trying to do operations on
+        * However, you don't need to use .Open() method
     * Feel free to look up what that code looks like but we don't need to apply it
+
+# Moar Design Patterns
+* Because we have 99 problems with coding but design patterns won't be one
+## Repository Design Pattern
+* When your application has a layer between your actual application and your database using interface or abstraction for accessing the database directly
+    * We already implemented it and it is our Data Layer project
+* Essentially, we have a middle man between your app and the database that has a sole responsiblity of anything data accessing to the database
+* Since we use abstraction, nothing will "break" when updating just your data layer and you can use as many C# files that can tap to multiple data source, tables, etc.
+## Unit of Work Design Pattern
+* For the most part, your repository should only have simple CRUD operations that messes with the database
+* Any "complex" operations that require more than one CRUD operations from the repository should be handled in the Unit of Work layer (our BL)
+* This is another layer that is before your application and it's sole responsiblility is to act like a **transaction**
+    * Meaning it either executes all of the query statements or none at all
+* A design pattern that follows the Atomicity property to prevent **Data inconsistency**
+
+# Things I didn't go over but QC might ask
+* Main reason I didn't go over it because using it can lead to so many data inconsistency if used improperly
+## Cascading delete
+* You know how deleting information from a table can lead to an error if that data is being referenced by another table
+* Well adding cascading delete will essentially ignore that safety net and delete it anyway and any data that referenced to it will be replaced with a NULL value instead
+* Rarely used because it can lead to massive amount of **data inconsistency**
+* Ex:
+    Imagine a scenario of 50 tables all referencing one table. You did cascading delete operation and now all those 50 tables have NULL values and trying to clean your database will be a massive hassle. 
+* It is possible to also just delete the row instead of putting NULL values but then that leads to massive lose of information so... lose lose situation either way
+## Indexing
+* Didn't go over because it is also not relevant in our case but really useful when your database have 50 tables
+* It is just a way to query data really fast from the database by... cheating almost
+* Basically, it will take the most commonly done query statements in your database and just save that query result
+    * So instead of doing the operation, it just gives you the result right away because sql already have it stored
+* Biggest con about it is just memory space since you are saving the information and that can get ridiculously big 
+    * Sometimes double the size of the table

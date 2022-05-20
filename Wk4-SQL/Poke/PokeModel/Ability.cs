@@ -2,6 +2,7 @@ namespace PokeModel
 {
     public class Ability
     {
+        public int ID { get; set; }
         public string Name { get; set; }
 
         //PowerPoint cannot be negative
@@ -26,7 +27,7 @@ namespace PokeModel
 
         public override string ToString()
         {
-            return $"=======\nName: {Name}\nPP: {PP}\nPower: {Power}\n=======";
+            return $"=======\nID: {ID}\nName: {Name}\nPP: {PP}\nPower: {Power}\n=======";
         }
     }
 }
