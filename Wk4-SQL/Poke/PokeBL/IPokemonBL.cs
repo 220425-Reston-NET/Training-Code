@@ -26,5 +26,18 @@ namespace PokeBL
         
         // List<Pokemon> SearchPokemonById(int p_pokeId);
         void AddAbilityToPokemon(Pokemon p_pokemon);
+
+        /// <summary>
+        /// Will give current pokemon in the DB
+        /// </summary>
+        /// <returns>List object that holds pokemon</returns>
+        List<Pokemon> GetAllPokemon();
+
+        /// <summary>
+        /// Will search a pokemon by Id
+        /// </summary>
+        /// <param name="p_id">The pokeID</param>
+        /// <returns>Pokemon object it found or null if pokemon not found</returns>
+        Pokemon SearchPokemonById(int p_id);
     }
 }

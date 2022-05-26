@@ -20,6 +20,8 @@ namespace PokeBL
             joinTable.PP = p_PP;
             joinTable.pokeId = p_pokeId;
 
+            //Logic to check if the pokemon even exist
+
             _pokeAbiRepo.Update(joinTable);
         }
     }

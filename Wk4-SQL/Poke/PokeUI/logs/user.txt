@@ -106,3 +106,4 @@ Health:  44
 2022-05-20 12:40:51.335 -04:00 [INF] User is viewing ability of a pokemon
 2022-05-20 12:45:35.532 -04:00 [INF] User going to Search Menu
 2022-05-20 12:45:37.835 -04:00 [INF] User going to Main Menu
+2022-05-26 11:16:01.650 -04:00 [INF] User going to AddPokemon Menu

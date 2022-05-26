@@ -39,6 +39,28 @@ namespace PokeBL
             }
         }
 
+        public List<Pokemon> GetAllPokemon()
+        {
+            return _pokeRepo.GetAll();
+        }
+
+        public Pokemon SearchPokemonById(int p_id)
+        {
+            List<Pokemon> currentListOfPoke = _pokeRepo.GetAll();
+
+            foreach (Pokemon pokeObj in currentListOfPoke)
+            {
+                //Condition to check that the name is similar
+                if (pokeObj.PokeID == p_id)
+                {
+                    return pokeObj;
+                }
+            }
+
+            //Will return null or no value if no pokemon was found
+            return null;
+        }
+
         public Pokemon SearchPokemonByName(string p_pokeName)
         {
             List<Pokemon> currentListOfPoke = _pokeRepo.GetAll();
@@ -55,5 +77,6 @@ namespace PokeBL
             //Will return null or no value if no pokemon was found
             return null;
         }
+        
     }
 }
