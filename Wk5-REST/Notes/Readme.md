@@ -149,8 +149,7 @@
 ### Result
 * Will perform some code after or before the execution of giving a view or IActionResult
 
-## OpenAPI (Swagger)
-* Just the fancy technical term for Swagger
+## Swagger (OpenAPI)
 * Swagger is a tool pre-built in our ASP.NET project with the sole purpose of checking if our rest api is definitely working
 * As you have guess, we don't really have a console app so we can visually see that our app is working so they created swagger just for the purpose
 * It will show you every action inside of a controller and also test them
