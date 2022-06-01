@@ -11,7 +11,7 @@
 * Horrible for scaling the application
 * Impossible to develop backend and frontend separately
 
-# Service Oriented Architecture (SOA) Introduction
+# Service Oriented Architecture (SOA) Introduction0
 * A style of software design where services are provided to the other components by application components, through a communication protocol over a network
 * Intuitive definition: We are decoupling backend and frontend and a communication protocol (can be HTTP, HTTPS, SMTP, etc.) to communicate between the two entities via the internet
 ## What are Services?
@@ -48,6 +48,52 @@
 * As with adding more teams, communication can become an issue
     * Since frontend and backend are being developed separately they might not have the same idea on doing a functionality (which you might experience once you start working in teams!)
 
+# REST
+* Stands for Representational State Transfer
+* It is an **architecture style** that uses SOA as its guide
+* It tells you how you should transfer information and how you should communicate with the client
+## What is an API?
+* Application Programming Interface
+* At its essence, it allows you to communicate and transfer information
+## What is a resource?
+* Anything that is being transferred, stored, processed, given, etc. (mostly objects for us)
+## Guiding Principles of Rest
+* Uniform Interface
+    * Your service would have an interface defined by four constraints:
+        * Identification of resources
+            * Able to identify the resource you are trying to access
+            * Ex: An endpoint that ends with /Pokemon/AllPokemon will give all the pokemon resource in the database
+        * Manipulation of resources through representation
+            * Using appropriate action verb to access/manipulate your resource
+            * Ex: GET method to get all pokemons or POST method to add a pokemon
+        * Self-description message
+            * Any other information needed to process the data
+            * Ex: the format the data will come in (JSON, XML, etc.)
+        * Hypermedia as the engine of application state (HATEOAS)
+            * Not implemented as much nowadays
+            * It gives other potential actions the user can take after doing one action
+            * Ex: GetAllPokemon would then give the user potential actions to take such as AddPokemon
+* Client-Server
+    * Client app will evolve separately from the server from the server app without any dependencies on each other
+    * Same concept of when we change our DL from the file system to database without breaking the other projects
+    * Decoupling the services from each other (Matters the most when we do MSA (microservices design pattern))
+    * Same concept of one service being change shouldn't break a different service
+* Layered System
+    * Constraining the interactions of your components to the ones in the next Layer
+    * The service should only have access to components it is dependent on
+    * Ex: The BL can only access the DL and the UI can only access BL and not DL
+* Stateless
+    * Server isn't responsible for storing client state
+    * It will just treat every http request as new or completely different even if it came from the same client or even doing the same http request (refreshing the page)
+    * The client is the only one responsible for storing its own state (like storing cookies or tokens)
+* Cacheable
+    * Resource from the server can be cached if applicable
+    * Meaning the client can store information that was sent by the server
+    * Ex: once you get a list of pokemn, refreshing the page you instantly get that list of pokemon since it was stored already
+* Code on Demand (optional)
+    * Allows client functionality to be extended by downloading and executing code in a form of applets.
+    * Outdated at this point (think of how in the past to play a game, the game has a loading process well that loading process is your computer downloading the scripts to run the game)
+    
 # HTTP/HTTPS
 * Hyper Text Transfer Protocol (Secured)
 * The protocol that both computers have to follow in order to understand/communicate with each other and work together to display a nice looking website in your browser, register an account, login, etc.
@@ -72,8 +118,6 @@
     * Get - Used to retrieve data from the server
     * Post - Used to submit data to the server
     * Put - Used to update/replace data on the server
-    * Delete - Used to delete existing data on the server
-    * Head - It is like the get method but it will only give you the header (metadata so no response body)
 
 ## HTTP status code
 * Gives the result of the HTTP request
@@ -121,7 +165,7 @@
 * Model binding can also do it from C# object into JSON object
     * When we return a C# object in an action, it automatically creates a JSON object that gets put into an HTTP response
 
-## Middleware
+## Routing Middleware
 * Allows ASP.NET to know where to take the user's http request
     * In our case, which controller and which action inside of the controller should the http request go to
 * It uses **routing middleware** to be able to find the appropriate controller and then the appropriate action within the controller to handle the request
@@ -147,7 +191,8 @@
 ### Result
 * Will perform some code after or before the execution of giving a view or IActionResult
 
-## Swagger (OpenAPI)
+## OpenAPI (Swagger)
+* Just the fancy technical term for Swagger
 * Swagger is a tool pre-built in our ASP.NET project with the sole purpose of checking if our rest api is definitely working
 * As you have guess, we don't really have a console app so we can visually see that our app is working so they created swagger just for the purpose
 * It will show you every action inside of a controller and also test them
@@ -172,3 +217,20 @@
 ## Query syntax
 * It is more like SQL in that you create a statement-like operation using keywords
 * I would use joins with query syntaxes since it is easier to understand
+
+# Asynchronous Programming
+* Remember how concurrent things happening at the same time complicated a lot of things (Talking about you Isolation in ACID)
+* Since we are deploying this on a web service, we have to take into account multiple people using your rest api at the same time
+* Here comes Asynchrnous programming, It is the process of allowing two things to happen at once
+    * Gone are the days of looking at your code line by line but your code might run multiple lines of code together
+    * Debugging will .... be harder for sure
+
+# Delegates
+* It is when you want to put a method inside of a variable to call on multiple times
+* We used lambda delegate multiple times (where we put a "=>" syntax) to be able to put a method inside of a parameter
+* So one of the main uses of delegates is being able to pass methods as a parameter of another method for that method to use
+    * It is like inception movie... a method within a method within a method...
+
+
+
+
