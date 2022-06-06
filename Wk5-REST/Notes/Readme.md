@@ -118,6 +118,7 @@
     * Get - Used to retrieve data from the server
     * Post - Used to submit data to the server
     * Put - Used to update/replace data on the server
+    * Delete - Used to delete data on the server
 
 ## HTTP status code
 * Gives the result of the HTTP request
