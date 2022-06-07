@@ -15,6 +15,8 @@ builder.Services.AddScoped<IRepository<Pokemon>, SQLPokemonRepository>(repo => n
 builder.Services.AddScoped<IPokemonBL, PokemonBL>();
 builder.Services.AddScoped<IRepository<PokemonAbilityJoin>, SQLPokeAbilityJoinRepo>(repo => new SQLPokeAbilityJoinRepo(builder.Configuration.GetConnectionString("Stephen_Pagdilao_DbDemo")));
 builder.Services.AddScoped<IPokeAbiJoinBL, PokeAbiJoinBL>();
+builder.Services.AddScoped<IRepository<Store>, SQLStoreRepository>(repo => new SQLStoreRepository(builder.Configuration.GetConnectionString("Stephen_Pagdilao_DbDemo")));
+builder.Services.AddScoped<IStoreBL, StoreBL>();
 
 var app = builder.Build();
 
@@ -32,3 +34,4 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
