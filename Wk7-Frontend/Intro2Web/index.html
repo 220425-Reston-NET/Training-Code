@@ -1,0 +1,107 @@
+<!DOCTYPE html> <!-- This declares that this particular file will be an HTML document -->
+<html lang="en"> 
+
+<!-- the head tag contains all the metadata (extra information to configure something) that this HTML file will depend/configure on-->
+<head>
+
+    <!-- meta tag is used to define some configuration about this HTML documentation -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to HTML</title>
+
+</head>
+
+<!-- Body tag contains all the content this HTML should display to the browser -->
+<body>
+    
+    <!-- Heading tag is used to display titles or subtitles (from h1 to h6) -->
+    <h1> Introduction to HTML </h1>
+    <h6> Tiny heading </h6>
+
+    <!-- Div tags are just the way to group elements together and it is used for organization -->
+    <div>
+        Divs are a generic block element that is used to separate a section in an HTML document
+
+        <p>Paragraph tags are design to display long texts in your website and it is more so to tell the developer looking at this HTML document that this will be a long text</p>
+        <p>You should should certain tags that makes the most sense to what you are trying to do in your HTML</p>
+
+        <div>
+            You can have nested divs within a div
+        </div>
+    </div>
+
+    <!-- Block vs Inline elements -->
+    <div>
+        <h3>Span tag</h3>
+        <span>Span is used to create inline elements.</span>
+        <span>This is another span and it will put the span in the same line as the first span</span>
+    </div>
+
+    <!-- Table tag is used to add a table in your browser -->
+    <h3>Creating table in HTML</h3>
+    <table>
+        <!-- tr tag is used to indicate a row inside of a table. In this case, it will be our very first row -->
+        <tr>
+            <!-- th is for table headings and it is to indicate what the data is going to be inside of this table -->
+            <th>PokeId</th>
+            <th>Name</th>
+            <th>Type</th>
+        </tr>
+        
+        <!-- Second row of the table -->
+        <tr>
+            <td>1</td>
+            <td>Pikachu</td>
+            <td>Electric</td>
+            <td>Random column</td>
+        </tr>
+
+        <!-- Third row of the table -->
+        <tr>
+            <td>2</td>
+            <td>Charizard</td>
+            <td>Fire</td>
+        </tr>
+    </table>
+
+    <!-- Article semantic element will not change the look of the browser but does tell the developer that this section of HTML will be a article/newspaper/blog type of thing in the website -->
+    <article>
+
+    </article>
+
+    <!-- Showcase how to add bullet points or a list of something -->
+    <div>
+        <h3>List Section</h3>
+        <h4>Ordered List</h4>
+        <ol>
+            <li>This is the first item in this ordered list</li>
+            <li>This will be numbered 2</li>
+            <li>You use ordered list if the sequence of information matters</li>
+        </ol>
+
+        <h4>Unordered List</h4>
+        <ul>
+            <li>This is an unordered list and will just be bullet points</li>
+            <ul>
+                <li>Another nested list</li>
+            </ul>
+            <li>This is another example of an item inside of an unordered list</li>
+            <ol>
+                <li>This is an example of a nested list</li>
+            </ol>
+        </ul>
+    </div>
+
+    <button>Click me</button>
+
+    <!-- image tag will display an image in your website -->
+    <!-- It is a self closing tag meaning you can't really put another HTML element inside of this tag -->
+    <!-- attribute are just extra information used by the element. In this case, img uses src attribute to find what image to display whether filepath or a link -->
+    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d1/Lake_Estancia_and_Lake_Willard.png">
+
+    
+    
+</body>
+
+</html>
