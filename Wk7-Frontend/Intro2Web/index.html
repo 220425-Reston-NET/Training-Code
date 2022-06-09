@@ -10,20 +10,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Introduction to HTML</title>
 
+    <!-- Internal CSS will only apply styling on the HTML it was defined on -->
+    <style>
+        /* This is how you comment in a css language */
+
+        /* Example of tag selector */
+        /* Selects every element that has the similar tag and apply styling of it */
+        p {
+            color: crimson;
+        }
+
+        /* Example of a class selector */
+        /* Selects every element that has the same class name and apply styling to it */
+        .blue {
+            color: blue;
+        }
+
+        /* Example of a id selector */
+        #blueviolet{
+            color: blueviolet;
+        }
+
+    </style>
+
+    <link rel="stylesheet" href="index.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
 </head>
 
 <!-- Body tag contains all the content this HTML should display to the browser -->
 <body>
     
     <!-- Heading tag is used to display titles or subtitles (from h1 to h6) -->
-    <h1> Introduction to HTML </h1>
+    <h1 class="blue"> Introduction to HTML </h1>
     <h6> Tiny heading </h6>
 
     <!-- Div tags are just the way to group elements together and it is used for organization -->
-    <div>
+    <div class="chartreuse blue">
         Divs are a generic block element that is used to separate a section in an HTML document
 
-        <p>Paragraph tags are design to display long texts in your website and it is more so to tell the developer looking at this HTML document that this will be a long text</p>
+        <p class="blue" style='color: aquamarine;' >Paragraph tags are design to display long texts in your website and it is more so to tell the developer looking at this HTML document that this will be a long text</p>
         <p>You should should certain tags that makes the most sense to what you are trying to do in your HTML</p>
 
         <div>
@@ -32,14 +59,14 @@
     </div>
 
     <!-- Block vs Inline elements -->
-    <div>
+    <div id="blueviolet">
         <h3>Span tag</h3>
         <span>Span is used to create inline elements.</span>
         <span>This is another span and it will put the span in the same line as the first span</span>
     </div>
 
     <!-- Table tag is used to add a table in your browser -->
-    <h3>Creating table in HTML</h3>
+    <h3 class="chartreuse">Creating table in HTML</h3>
     <table>
         <!-- tr tag is used to indicate a row inside of a table. In this case, it will be our very first row -->
         <tr>
@@ -93,12 +120,13 @@
         </ul>
     </div>
 
-    <button>Click me</button>
+    <button class="btn btn-primary">Click me</button>
 
     <!-- image tag will display an image in your website -->
     <!-- It is a self closing tag meaning you can't really put another HTML element inside of this tag -->
     <!-- attribute are just extra information used by the element. In this case, img uses src attribute to find what image to display whether filepath or a link -->
-    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d1/Lake_Estancia_and_Lake_Willard.png">
+    <!-- Inline styling is when you use a style attribute inside the element you want to apply the style in -->
+    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d1/Lake_Estancia_and_Lake_Willard.png" style="height: 100px;">
 
     
     

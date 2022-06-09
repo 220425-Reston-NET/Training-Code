@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to JS</title>
+</head>
+<body>
+
+    <h1>Fundamentals to JS</h1>
+    <h3>Functions</h3>
+    <p>Using a button is a great simple way to invoke a function in JS but any events can work</p>
+    <!-- onclick attribute is an event based on whenever that button was clicked on by a mouse -->
+    <!-- It will execute the following function in JS when it is clicked -->
+    <button onclick="BasicFunction()">Basic Function</button>
+
+    <h3>Objects</h3>
+    <p>Like objects in JSON, they will hold some values in a form of key:value pairs</p>
+    <button onclick="CreatingAnObjectFunction()">Object Function</button>
+
+    <h3>Class</h3>
+    <p>Behaves like a class in C#, you can create multiple objects from a class</p>
+    <button onclick="CreatingClassesFunction()">Class Function</button>
+
+    <h3 id="DOMHeading">DOM</h3>
+    <p>Allowing us to dynnamically change our website</p>
+    <button onclick="DOMFunction()">DOM Function</button>
+    <div class="addElementHere">
+
+    </div>
+
+    <script>
+        // This is how you add a comment in JS
+        function BasicFunction() {
+            console.log("This is similar to Console.WriteLine()");
+
+            //Like in C#, if statements work the same
+            if (false) {
+                console.log("It works like a normal if statement in C#");
+            }else if (false) {
+                console.log("It works like a normal else if");
+            }else {
+                console.log("It works like a normal else");
+            }
+
+            //Define a variable, JS is loosely typed. Meaning it doesn't care about what datatype you will put in this variable
+            let i = 1239;
+            i = "jaflwei";
+            i = true;
+            i = 0;
+            //While loop is 0 1 2 3 4 5 6 7 8 9
+            while (i < 10) {
+                i++
+                console.log("Repeating multiple times");
+            }
+
+            for (let index = 0; index < 10; index++) {
+                console.log("Repeating multiple times 2");
+            }
+
+            i = 10.2415 + 18.912;
+            console.log(typeof i);
+
+            i = "String"
+            console.log(typeof i);
+
+            i = true;
+            console.log(typeof i);
+
+            // Anything that is not a 0 will be true even if it is positive or negative numbers
+            if (0) {
+                console.log("Will this execute?");
+            }
+
+            //Anything that is not an empty string will execute
+            if ("") {
+                console.log("Will this execute?");
+            }
+
+            // === determines the datatype as well to see if it is equal
+            // == tries its best to understand what you mean and checking if those two are equal
+            if (0 === "") {
+                console.log("Will this execute?");
+            }
+
+            console.log(typeof NaN);
+        }
+    </script>
+
+    <script src="BasicJS.js"></script>
+</body>
+</html>
