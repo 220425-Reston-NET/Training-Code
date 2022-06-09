@@ -112,3 +112,15 @@ function DOMFunction() {
 
     document.getElementById("DOMHeading").style.color = "red";
 }
+
+function StorageFunction() {
+    //Saves the information inside the client's local storage
+    localStorage.setItem("Name", "Stephen");
+
+    //Grabs the information from the client's local storage based on the key
+    console.log(localStorage.getItem("Name"));
+
+    //There is a session storage that is identitcal to local storage
+    //Main difference is the session storage the data there is temporary once the session ends the data disappear
+}
+
