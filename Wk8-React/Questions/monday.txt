@@ -1,0 +1,14 @@
+What is node?
+What is npm?
+What does the package.json do in an npm project?
+What is Typescript?
+High Level Language Vs Low Level Language
+Compiled vs Transpiled
+What are the benefits of Typescript?
+What is a callback function in JavaScript?
+What are the datatypes added to TypeScript?
+What are the Access Modifiers in TypeScript?
+What is a Module?
+What is the command to create a node project?
+What is the command to transpile your typescript code to javascript code?
+What is the command to create a react app?
