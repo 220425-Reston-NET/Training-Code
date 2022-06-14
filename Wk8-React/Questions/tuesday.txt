@@ -1,0 +1,13 @@
+What is React?
+What is a SPA?
+What is a Component?
+What is JSX?
+What are the two types of Components in React?
+What is the command to run the development server in React?
+What is the shortcut for creating a functional component?
+What is the ternary operator?
+How do you render a list of items to the DOM in react?
+What are props?
+What is the naming convention for Components?
+What is the convention for event attributes in react compared to vanilla html?
+
