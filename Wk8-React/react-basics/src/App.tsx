@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
 import ComponentOne from './components/ComponentOne/ComponentOne';
-import ComponentTwo from './components/ComponentTwo/ComponentTwo';
 import Events from './events/Events';
-import Button from './props/ChildComponent/Button';
+import ListComponent from './lists/ListComponent';
+import Problem from './problem/Problem';
 import ParentComponent from './props/ParentComponent/ParentComponent';
 
 /* 
@@ -36,6 +36,10 @@ function App() : JSX.Element {
       <Events/>
       <h2>Props</h2>
       <ParentComponent/>
+      <h2>Lists</h2>
+      <ListComponent/>
+      <h2>Problem</h2>
+      <Problem/>
     </>
   );
 }
