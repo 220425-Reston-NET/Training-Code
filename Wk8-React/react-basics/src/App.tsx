@@ -3,6 +3,8 @@ import './App.css';
 import ComponentOne from './components/ComponentOne/ComponentOne';
 import ComponentTwo from './components/ComponentTwo/ComponentTwo';
 import Events from './events/Events';
+import Button from './props/ChildComponent/Button';
+import ParentComponent from './props/ParentComponent/ParentComponent';
 
 /* 
   What is react?
@@ -32,6 +34,8 @@ function App() : JSX.Element {
       <ComponentOne/>
       <h2>Events</h2>
       <Events/>
+      <h2>Props</h2>
+      <ParentComponent/>
     </>
   );
 }

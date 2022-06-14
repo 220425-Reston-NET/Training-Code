@@ -4,7 +4,7 @@ import './ComponentTwo.css'
 function ComponentTwo() {
   return (
     <div id="comp-two">
-        <h3>ComponentTwo</h3>
+        <h3></h3>ComponentTwo
     </div>
   )
 }
