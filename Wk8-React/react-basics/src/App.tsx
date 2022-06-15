@@ -1,10 +1,13 @@
 import React from 'react';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import ComponentOne from './components/ComponentOne/ComponentOne';
 import Events from './events/Events';
 import ListComponent from './lists/ListComponent';
+import Nav from './nav/Nav';
 import Problem from './problem/Problem';
 import ParentComponent from './props/ParentComponent/ParentComponent';
+import Hooks from './solution/Hooks';
 
 /* 
   What is react?
@@ -30,7 +33,7 @@ import ParentComponent from './props/ParentComponent/ParentComponent';
 function App() : JSX.Element {
   return (
     <>
-      <h2>Intro to Components</h2>
+      {/* <h2>Intro to Components</h2>
       <ComponentOne/>
       <h2>Events</h2>
       <Events/>
@@ -40,6 +43,16 @@ function App() : JSX.Element {
       <ListComponent/>
       <h2>Problem</h2>
       <Problem/>
+      <h2>Hooks</h2>
+      <Hooks/> */}
+      <Nav/>
+      <Routes>
+        <Route path='/' element={<ComponentOne/>}/>
+        <Route path='/events' element={<Events/>}/>
+        <Route path='/props' element={<ParentComponent/>}/>
+        <Route path='/lists' element={<ListComponent/>}/>
+        <Route path='/hooks' element={<Hooks/>}/>
+      </Routes>
     </>
   );
 }

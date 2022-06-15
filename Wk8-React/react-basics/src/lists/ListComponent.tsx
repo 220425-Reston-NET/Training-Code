@@ -10,9 +10,7 @@ function ListComponent() {
         {
             /* 
                 - To display each item in an array to the DOM, we use the map array method.
-                - The map function transforms each item in the array based on what you defined in the function.
-
-                - The second argument in map is the index value of each item in the array, we can use the index value as the key property 
+                - The map function transforms each item in the array.
             */
             names.map((name, index) => {
                 return (
