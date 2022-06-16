@@ -10,4 +10,3 @@ How do you render a list of items to the DOM in react?
 What are props?
 What is the naming convention for Components?
 What is the convention for event attributes in react compared to vanilla html?
-
