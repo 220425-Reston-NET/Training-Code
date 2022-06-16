@@ -8,7 +8,6 @@ function Dashboard() {
     const [filteredPokemons, setFiltered] = useState([]);
 
     function handleInputChange(event : any){
-        console.log(event.target.value)
 
         setFiltered(pokemons.filter((pokemon : any) => {
             return pokemon.name.includes(event.target.value)
@@ -21,8 +20,6 @@ function Dashboard() {
         async function getAllPokemon(){
             let response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=151");
             let responseBody = await response.json();
-
-            console.log(responseBody);
 
             setPokemons(responseBody.results);
             setFiltered(responseBody.results);
