@@ -5,9 +5,8 @@ import ComponentOne from './components/ComponentOne/ComponentOne';
 import Events from './events/Events';
 import ListComponent from './lists/ListComponent';
 import Nav from './nav/Nav';
-import Problem from './problem/Problem';
 import ParentComponent from './props/ParentComponent/ParentComponent';
-import Hooks from './solution/Hooks';
+import Hooks from './hooks/Hooks';
 
 /* 
   What is react?

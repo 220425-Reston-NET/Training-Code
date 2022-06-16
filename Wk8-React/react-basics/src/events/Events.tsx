@@ -25,6 +25,16 @@ function Events() {
             <button onClick={clickHandler}>Click Me</button>
             <button onMouseOver={hoverHandler}>Hover Me!</button>
             <input type="text" onChange={inputHandler}/>
+
+            <h4>
+                Events are achieved similarly to how they are done in vanilla HTML, CSS and JavaScript. The only difference is the attribute value is camelCase instead of lowercase
+            </h4>
+
+            <br />
+
+            <h4>
+                In this example I demonstrated how to do an onClick, onMouseOver and onChange events. Open your browser console to see them working
+            </h4>
         </>
     )
 }

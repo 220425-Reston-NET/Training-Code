@@ -11,10 +11,13 @@ import './Button.css'
 //we are retrieving the background color, border radius and click event from the parent passed as props
 function Button(props : any) {
     return (
-        <button className="child-btn" style={{
-            backgroundColor: props.color, 
-            borderRadius: props.isRound === "true" ? "8px" : "0px"
-        }} onClick={props.onClick}>{props.text}</button>
+        <>
+            <button className="child-btn" style={{
+                backgroundColor: props.color, 
+                borderRadius: props.isRound === "true" ? "8px" : "0px"
+            }} onClick={props.onClick}>{props.text}</button>
+        </>
+        
     )
 }
 

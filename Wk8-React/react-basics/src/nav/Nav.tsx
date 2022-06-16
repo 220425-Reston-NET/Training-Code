@@ -1,7 +1,12 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 
 function Nav() {
+
+    //this is how you access the global counter value
+    const counter = useSelector((state : any) => state.counter.value);
+
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container-fluid">
@@ -25,6 +30,9 @@ function Nav() {
                 </li>
                 <li className="nav-item">
                     <Link to="/lists" className="nav-link">Lists</Link>
+                </li>
+                <li className="nav-item">
+                    <Link to="/hooks" className='nav-link'>{counter}</Link>
                 </li>
             </ul>
             </div>

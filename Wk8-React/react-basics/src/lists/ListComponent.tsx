@@ -17,7 +17,16 @@ function ListComponent() {
                     <div key={index} className="name-div">{name}</div>
                 )
             })
+
         }
+
+        <h4>
+            What does the map() function do in javascript?
+          <ul>
+            <li>Allows us to transform values in one array into another array with the desired format we want</li>
+            <li>We utilize it in React to convert an array of items into an array of JSX Elements to be displayed to the screen</li>
+          </ul>
+        </h4>  
     </>
   )
 }
