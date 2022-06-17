@@ -66,15 +66,15 @@ function Hooks() {
     return (
         <>
             {
-                state.isVisible ? <h2>Hello World!</h2> : <></>
+                state.isVisible ? <h2 data-testid="hello-world">Hello World!</h2> : <></>
             }
-            <button onClick={toggleDiv}>Toggle!</button>
+            <button data-testid="toggle-btn" onClick={toggleDiv}>Toggle!</button>
 
-            <div>{counter}</div>
-            <button onClick={incrementCounter}>Increment</button>
+            <div data-testid="counter-div">{counter}</div>
+            <button data-testid="increment-btn" onClick={incrementCounter}>Increment</button>
 
-            <input type="text" onChange={updateText} />
-            <h2>{state.text}</h2>
+            <input data-testid="text-input" type="text" onChange={updateText} />
+            <h2 data-testid="text-h2">{state.text}</h2>
 
             <h4>
                 What is a Hook?
