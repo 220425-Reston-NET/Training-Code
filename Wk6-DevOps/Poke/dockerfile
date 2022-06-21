@@ -39,5 +39,5 @@ copy --from=build /app/publish ./
 #CMD docker instructions tells the docker engine how/where to run this application
 cmd ["dotnet", "PokeApi.dll"]
 
-#Expose to port 80
+#Expose to port 80 c
 expose 80
