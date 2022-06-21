@@ -1,0 +1,13 @@
+PigLatin is a fake language mainly used for chilren.
+Steps to convert a word into pig latin:
+    1. move the first character of a word to the end of the word.
+    2. add ay to the end of the word
+
+Write a node application to that takes in an array of names and creates a new array of all of the names but the names are in piglatin.
+
+Sample Input: ["Kevin", "Steve", "Nikki"];
+
+Sample Output: ["evinKay", "teveSay", "ikkiNay"];
+
+
+hint: utilize the map array method

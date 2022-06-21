@@ -1,0 +1,10 @@
+.child-btn{
+    background-color: rgb(107, 169, 239);
+    padding: 10px;
+    margin: 5px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px rgb(112, 112, 112);
+    cursor: pointer;
+}

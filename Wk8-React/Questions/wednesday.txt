@@ -1,0 +1,7 @@
+What are hooks?
+What does the useState() hook do?
+	- What is state?
+What does the useEffect() hook do?
+What is ReactRouter?
+What is redux?
+What is the flux design pattern?

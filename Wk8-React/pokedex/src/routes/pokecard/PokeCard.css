@@ -1,0 +1,40 @@
+.view-container{
+    display: flex;
+    justify-content: center;
+}
+
+.card{
+    width: 250px;
+
+    background-color: rgb(93, 142, 226);
+    border: goldenrod 8px solid;
+
+    padding: 20px;
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-size: 24px;
+
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#poke-name{
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+#img-container{
+    width: 100%;
+    background-color: black;
+    border-radius: 6px;
+}
+
+#img-container img{
+    width: 100%;
+}
